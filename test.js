@@ -5,7 +5,6 @@ const util = require('util');
 const path = require('path');
 const readFile = util.promisify(fs.readFile);
 
-
 fixture`Getting Started`
   .page`https://applitools.com/helloworld`
   .before(async ctx => {
@@ -18,10 +17,10 @@ fixture`Getting Started`
     // Set eyes on the fixture context
     ctx.eyes = eyes;
   })
-  .beforeEach(async t => {
-    const {eyes} = t.fixtureCtx;
+  .beforeEach(async ({fixtureCtx}) => {
+    const {eyes} = fixtureCtx;
     // Start visual testing.
-    await eyes.open("Applitools site", "Sanity Test", { width: 785, height: 1087 });
+    await eyes.open("Applitools site", "Hello World Test", { width: 700, height: 1000 });
   });
 
 
