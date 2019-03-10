@@ -6,3 +6,5 @@ A sample repository to run Applitools Images SDK with Test Cafe
 
 ## Run Tests
 ``` npm t ```
+
+*Thanks to Daniel(R&D at Applitools) for the help.*
